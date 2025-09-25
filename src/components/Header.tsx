@@ -8,13 +8,13 @@ const Header = () => {
       </div>
       
       <nav className="flex items-center gap-8">
-        <a href="#" className="text-lg font-semibold" style={{ color: '#B946FF' }}>
+        <a href="/" className="text-lg font-semibold" style={{ color: '#B946FF' }}>
           Home
         </a>
-        <a href="#" className="text-lg font-semibold" style={{ color: '#1DC8CC' }}>
+        <a href="/" className="text-lg font-semibold" style={{ color: '#1DC8CC' }}>
           Leaderboard
         </a>
-        <a href="#" className="text-lg font-semibold" style={{ color: '#B946FF' }}>
+        <a href="/profile" className="text-lg font-semibold" style={{ color: '#B946FF' }}>
           Profile
         </a>
       </nav>

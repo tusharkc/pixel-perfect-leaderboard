@@ -52,6 +52,15 @@
     box-shadow: 0 0 15px rgba(185, 70, 255, 0.3);
     border: 2px solid #B946FF;
   }
+  
+  .profile-avatar-glow {
+    box-shadow: 0 0 30px rgba(29, 200, 204, 0.6), 0 0 60px rgba(29, 200, 204, 0.4);
+    border: 3px solid #1DC8CC;
+  }
+  
+  .claim-rewards-button {
+    box-shadow: 0 0 15px rgba(29, 200, 204, 0.4);
+  }
 }
 
 @layer base {
