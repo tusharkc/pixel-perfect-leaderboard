@@ -29,7 +29,7 @@ const Index = () => {
         {/* Navigation */}
         <nav className="flex items-center gap-6">
           <a href="/" className="text-lg font-medium text-purple-bright">Home</a>
-          <a href="/" className="text-lg font-medium text-blue-cyan">Leaderboard</a>
+          <a href="/leaderboard" className="text-lg font-medium text-blue-cyan">Leaderboard</a>
           <a href="/profile" className="text-lg font-medium text-purple-bright">Profile</a>
           <button className="bg-purple-bright text-white px-6 py-3 rounded-xl font-semibold">
             Connect Wallet
