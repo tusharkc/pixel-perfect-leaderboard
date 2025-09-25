@@ -33,45 +33,58 @@
     background: linear-gradient(180deg, #1E192F 0%, #1F152D 100%);
   }
   
-  /* New Timer Design */
-  .timer-container {
-    width: 380px;
-    height: 280px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .timer-background {
-    width: 380px;
-    height: 280px;
-    background-image: url('/timer-bg.png');
-    background-size: cover;
-    background-position: center;
+  /* Timer Card Design */
+  .timer-card {
+    width: 420px;
+    height: 300px;
+    background: linear-gradient(135deg, rgba(108, 99, 128, 0.8) 0%, rgba(88, 77, 108, 0.9) 100%);
     border-radius: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   }
   
-  .timer-background::before {
+  .timer-circle-container {
+    position: relative;
+    width: 240px;
+    height: 240px;
+  }
+  
+  .timer-circle-container::before {
     content: '';
     position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    border-radius: 27px;
-    background: linear-gradient(135deg, #1DC8CC 0%, #B946FF 100%);
-    z-index: -1;
-    animation: timer-glow 3s ease-in-out infinite alternate;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    background: conic-gradient(from 0deg, #1DC8CC 0%, #B946FF 50%, #1DC8CC 100%);
+    border-radius: 50%;
+    z-index: 1;
+    animation: rotate-glow 4s linear infinite;
   }
   
-  .timer-inner {
-    width: 200px;
-    height: 200px;
+  .timer-circle-container::after {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    right: -12px;
+    bottom: -12px;
+    background: radial-gradient(circle, 
+      rgba(29, 200, 204, 0.4) 0%, 
+      rgba(185, 70, 255, 0.3) 50%, 
+      rgba(29, 200, 204, 0.2) 100%);
+    border-radius: 50%;
+    z-index: 0;
+    filter: blur(8px);
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+  
+  .timer-circle {
+    width: 240px;
+    height: 240px;
     background: #000000;
     border-radius: 50%;
     display: flex;
@@ -79,36 +92,22 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    z-index: 2;
   }
   
-  .timer-inner::before {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #1DC8CC 0%, #B946FF 100%);
-    z-index: -1;
-    animation: inner-glow 2s ease-in-out infinite alternate;
+  @keyframes rotate-glow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
   }
   
-  @keyframes timer-glow {
+  @keyframes pulse-glow {
     0% {
-      box-shadow: 0 0 30px rgba(29, 200, 204, 0.4), 0 0 60px rgba(185, 70, 255, 0.3);
+      transform: scale(1);
+      opacity: 0.6;
     }
     100% {
-      box-shadow: 0 0 50px rgba(29, 200, 204, 0.7), 0 0 100px rgba(185, 70, 255, 0.5);
-    }
-  }
-  
-  @keyframes inner-glow {
-    0% {
-      box-shadow: 0 0 20px rgba(29, 200, 204, 0.3), 0 0 40px rgba(185, 70, 255, 0.2);
-    }
-    100% {
-      box-shadow: 0 0 40px rgba(29, 200, 204, 0.6), 0 0 80px rgba(185, 70, 255, 0.4);
+      transform: scale(1.05);
+      opacity: 0.8;
     }
   }
   
@@ -179,6 +178,14 @@
     padding: 20px;
     border-radius: 16px;
     text-align: center;
+  }
+  
+  .stat-card-new {
+    background: linear-gradient(135deg, rgba(108, 99, 128, 0.9) 0%, rgba(88, 77, 108, 0.95) 100%);
+    padding: 24px 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   }
   
   /* Participant Card */

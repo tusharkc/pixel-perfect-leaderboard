@@ -40,12 +40,12 @@ const Index = () => {
       {/* Central Content */}
       <div className="flex-1 flex flex-col items-center justify-center px-6 py-12">
         {/* Countdown Timer */}
-        <div className="relative mb-12">
-          <div className="timer-container">
-            <div className="timer-background">
-              <div className="timer-inner">
+        <div className="relative mb-8">
+          <div className="timer-card">
+            <div className="timer-circle-container">
+              <div className="timer-circle">
                 <div className="text-gray-light text-lg mb-2 text-center font-medium">Pool Opens In</div>
-                <div className="text-white text-7xl font-bold text-center tracking-wider">
+                <div className="text-white text-6xl font-bold text-center tracking-wider">
                   {timeLeft.minutes.toString().padStart(2, '0')}:{timeLeft.seconds.toString().padStart(2, '0')}
                 </div>
               </div>
@@ -69,14 +69,14 @@ const Index = () => {
         </div>
 
         {/* Stats Cards */}
-        <div className="flex gap-6 mb-12 w-full max-w-md">
-          <div className="stat-card flex-1">
+        <div className="flex gap-4 mb-8 w-full max-w-md">
+          <div className="stat-card-new flex-1">
             <div className="text-gray-light text-sm mb-2 font-medium">Total Staked</div>
-            <div className="text-white text-3xl font-bold">0.9 SOL</div>
+            <div className="text-blue-cyan text-3xl font-bold">0.9 SOL</div>
           </div>
-          <div className="stat-card flex-1">
+          <div className="stat-card-new flex-1">
             <div className="text-gray-light text-sm mb-2 font-medium">Total Players</div>
-            <div className="text-white text-3xl font-bold">120</div>
+            <div className="text-blue-cyan text-3xl font-bold">120</div>
           </div>
         </div>
 
