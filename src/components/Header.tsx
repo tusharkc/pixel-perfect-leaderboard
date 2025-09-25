@@ -1,36 +1,22 @@
-import { Zap, Menu } from "lucide-react";
-
 const Header = () => {
   return (
-    <header className="flex items-center justify-between px-6 py-6">
-      {/* Logo */}
+    <header className="flex items-center justify-between px-8 py-6">
       <div className="flex items-center gap-2">
-        <Zap className="w-8 h-8 text-orange-light" />
-        <h1 className="text-3xl font-bold text-white uppercase tracking-wide">
-          STAKR
-        </h1>
+        <span className="text-3xl font-bold" style={{ color: '#FFDD00' }}>
+          STAKR⚡
+        </span>
       </div>
       
-      {/* Mobile Menu Icon */}
-      <Menu className="w-6 h-6 text-white md:hidden" />
-      
-      {/* Desktop Navigation */}
-      <nav className="hidden md:flex items-center gap-8">
-        <a href="/" className="text-lg font-semibold text-white hover:text-orange-light transition-colors">
+      <nav className="flex items-center gap-8">
+        <a href="/" className="text-lg font-semibold" style={{ color: '#B946FF' }}>
           Home
         </a>
-        <a href="/" className="text-lg font-semibold text-blue-cyan hover:text-white transition-colors">
+        <a href="/" className="text-lg font-semibold" style={{ color: '#1DC8CC' }}>
           Leaderboard
         </a>
-        <a href="/profile" className="text-lg font-semibold text-purple-bright hover:text-white transition-colors">
+        <a href="/profile" className="text-lg font-semibold" style={{ color: '#B946FF' }}>
           Profile
         </a>
-        <button 
-          className="px-6 py-3 rounded-lg font-semibold text-white transition-all duration-300 hover:scale-105"
-          style={{ backgroundColor: '#B946FF' }}
-        >
-          Connect Wallet
-        </button>
       </nav>
     </header>
   );

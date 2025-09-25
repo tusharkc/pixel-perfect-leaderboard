@@ -49,12 +49,6 @@ export default {
       },
       yellow: "#FFDD00",
       green: "#00FFB2",
-      // Additional colors from the specification
-      teal: {
-        bright: "#16D6C9",
-        light: "#56BCE1",
-      },
-      violet: "#781EF0",
     },
     extend: {
       borderRadius: {
