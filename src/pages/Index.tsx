@@ -19,87 +19,82 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen mobile-gradient">
+    <div className="min-h-screen bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url('/app_bg.png')"}}>
       {/* Header */}
-      <header className="flex items-center justify-between px-6 py-4">
+      <header className="flex items-center justify-between px-6 py-6">
         <div className="flex items-center gap-2">
-          <span className="text-3xl font-bold text-yellow">STAKR⚡</span>
+          <span className="text-4xl font-bold text-yellow">STAKR⚡</span>
         </div>
         
-        {/* Mobile Menu Icon */}
-        <div className="flex flex-col gap-1">
-          <div className="w-6 h-0.5 bg-white"></div>
-          <div className="w-6 h-0.5 bg-white"></div>
-          <div className="w-6 h-0.5 bg-white"></div>
-        </div>
+        {/* Navigation */}
+        <nav className="flex items-center gap-6">
+          <a href="/" className="text-lg font-medium text-purple-bright">Home</a>
+          <a href="/" className="text-lg font-medium text-blue-cyan">Leaderboard</a>
+          <a href="/profile" className="text-lg font-medium text-purple-bright">Profile</a>
+          <button className="bg-purple-bright text-white px-6 py-3 rounded-xl font-semibold">
+            Connect Wallet
+          </button>
+        </nav>
       </header>
 
-      {/* Navigation Tabs */}
-      <nav className="flex items-center justify-center gap-8 px-6 py-4">
-        <a href="/" className="text-lg font-semibold text-purple-bright">Home</a>
-        <a href="/" className="text-lg font-semibold text-blue-cyan">Leaderboard</a>
-        <a href="/profile" className="text-lg font-semibold text-purple-bright">Profile</a>
-        <button className="bg-purple-bright text-white px-4 py-2 rounded-lg font-semibold">
-          Connect Wallet
-        </button>
-      </nav>
-
       {/* Central Content */}
-      <div className="flex-1 flex flex-col items-center justify-center px-6 py-8">
+      <div className="flex-1 flex flex-col items-center justify-center px-6 py-12">
         {/* Countdown Timer */}
-        <div className="relative mb-8">
-          <div className="countdown-container">
-            <div className="countdown-inner">
-              <div className="text-gray-light text-lg mb-2 text-center">Pool Opens In</div>
-              <div className="text-white text-6xl font-bold text-center">
-                {timeLeft.minutes.toString().padStart(2, '0')}:{timeLeft.seconds.toString().padStart(2, '0')}
+        <div className="relative mb-12">
+          <div className="timer-container">
+            <div className="timer-background">
+              <div className="timer-inner">
+                <div className="text-gray-light text-lg mb-2 text-center font-medium">Pool Opens In</div>
+                <div className="text-white text-7xl font-bold text-center tracking-wider">
+                  {timeLeft.minutes.toString().padStart(2, '0')}:{timeLeft.seconds.toString().padStart(2, '0')}
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Start Playing Button */}
-        <button className="start-playing-button w-full max-w-sm mb-6">
+        <button className="start-playing-btn w-full max-w-md mb-8">
           Start Playing Now
         </button>
 
         {/* Min/Max Buttons */}
-        <div className="flex gap-4 mb-8 w-full max-w-sm">
-          <button className="min-button flex-1">
-            <span className="text-sm">⏱</span> Min: 0.5 SOL
+        <div className="flex gap-6 mb-12 w-full max-w-md">
+          <button className="min-btn flex-1">
+            ⏱ Min: 0.5 SOL
           </button>
-          <button className="max-button flex-1">
-            <span className="text-sm">⏱</span> Max: 0.9 SOL
+          <button className="max-btn flex-1">
+            ⏱ Max: 0.9 SOL
           </button>
         </div>
 
         {/* Stats Cards */}
-        <div className="flex gap-4 mb-8 w-full max-w-sm">
-          <div className="stats-card flex-1">
-            <div className="text-gray-light text-sm mb-1">Total Staked</div>
-            <div className="text-white text-2xl font-bold">0.9 SOL</div>
+        <div className="flex gap-6 mb-12 w-full max-w-md">
+          <div className="stat-card flex-1">
+            <div className="text-gray-light text-sm mb-2 font-medium">Total Staked</div>
+            <div className="text-white text-3xl font-bold">0.9 SOL</div>
           </div>
-          <div className="stats-card flex-1">
-            <div className="text-gray-light text-sm mb-1">Total Players</div>
-            <div className="text-white text-2xl font-bold">120</div>
+          <div className="stat-card flex-1">
+            <div className="text-gray-light text-sm mb-2 font-medium">Total Players</div>
+            <div className="text-white text-3xl font-bold">120</div>
           </div>
         </div>
 
         {/* Top Participants */}
-        <div className="w-full max-w-sm">
-          <div className="flex justify-between items-center mb-4">
-            <div className="text-gray-light text-sm">Top Participants</div>
-            <div className="text-gray-light text-sm">Staked Amount</div>
+        <div className="w-full max-w-md">
+          <div className="flex justify-between items-center mb-6">
+            <div className="text-gray-light text-sm font-medium">Top Participants</div>
+            <div className="text-gray-light text-sm font-medium">Staked Amount</div>
           </div>
           
-          <div className="participant-card">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-brown-medium rounded-full flex items-center justify-center">
+          <div className="participant-card-new">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-orange to-yellow rounded-full flex items-center justify-center">
                 <span className="text-white text-lg">👤</span>
               </div>
-              <span className="text-white font-semibold">John Miller</span>
+              <span className="text-white font-semibold text-lg">John Miller</span>
             </div>
-            <span className="text-white font-semibold">25 SOL</span>
+            <span className="text-white font-bold text-lg">25 SOL</span>
           </div>
         </div>
       </div>

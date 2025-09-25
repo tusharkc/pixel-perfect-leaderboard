@@ -33,7 +33,165 @@
     background: linear-gradient(180deg, #1E192F 0%, #1F152D 100%);
   }
   
-  /* Countdown timer styles */
+  /* New Timer Design */
+  .timer-container {
+    width: 380px;
+    height: 280px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .timer-background {
+    width: 380px;
+    height: 280px;
+    background-image: url('/timer-bg.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .timer-background::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 27px;
+    background: linear-gradient(135deg, #1DC8CC 0%, #B946FF 100%);
+    z-index: -1;
+    animation: timer-glow 3s ease-in-out infinite alternate;
+  }
+  
+  .timer-inner {
+    width: 200px;
+    height: 200px;
+    background: #000000;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .timer-inner::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1DC8CC 0%, #B946FF 100%);
+    z-index: -1;
+    animation: inner-glow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes timer-glow {
+    0% {
+      box-shadow: 0 0 30px rgba(29, 200, 204, 0.4), 0 0 60px rgba(185, 70, 255, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 50px rgba(29, 200, 204, 0.7), 0 0 100px rgba(185, 70, 255, 0.5);
+    }
+  }
+  
+  @keyframes inner-glow {
+    0% {
+      box-shadow: 0 0 20px rgba(29, 200, 204, 0.3), 0 0 40px rgba(185, 70, 255, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 40px rgba(29, 200, 204, 0.6), 0 0 80px rgba(185, 70, 255, 0.4);
+    }
+  }
+  
+  /* Start Playing Button */
+  .start-playing-btn {
+    background: linear-gradient(90deg, #1DC8CC 0%, #B946FF 100%);
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 20px 40px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .start-playing-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(29, 200, 204, 0.4);
+  }
+  
+  /* Min/Max Buttons */
+  .min-btn {
+    background: linear-gradient(90deg, #1DC8CC 0%, #00FFB2 100%);
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 16px 24px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .min-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(29, 200, 204, 0.3);
+  }
+  
+  .max-btn {
+    background: rgba(44, 35, 58, 0.9);
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 16px 24px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .max-btn:hover {
+    background: rgba(44, 35, 58, 1);
+    transform: translateY(-1px);
+  }
+  
+  /* Stats Cards */
+  .stat-card {
+    background: rgba(44, 35, 58, 0.9);
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+  }
+  
+  /* Participant Card */
+  .participant-card-new {
+    background: rgba(44, 35, 58, 0.9);
+    padding: 20px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Legacy styles for compatibility */
   .countdown-container {
     width: 280px;
     height: 280px;
@@ -78,7 +236,6 @@
     }
   }
   
-  /* Start Playing Button */
   .start-playing-button {
     background: linear-gradient(90deg, #1DC8CC 0%, #B946FF 100%);
     color: #FFFFFF;
@@ -96,7 +253,6 @@
     box-shadow: 0 8px 25px rgba(29, 200, 204, 0.3);
   }
   
-  /* Min/Max Buttons */
   .min-button {
     background: linear-gradient(90deg, #1DC8CC 0%, #00FFB2 100%);
     color: #FFFFFF;
@@ -125,7 +281,6 @@
     gap: 8px;
   }
   
-  /* Stats Cards */
   .stats-card {
     background: rgba(44, 35, 58, 0.8);
     padding: 16px;
@@ -133,7 +288,6 @@
     text-align: center;
   }
   
-  /* Participant Card */
   .participant-card {
     background: rgba(44, 35, 58, 0.8);
     padding: 16px;
