@@ -11,7 +11,7 @@ const Header = () => {
         <a href="/" className="text-lg font-semibold" style={{ color: '#B946FF' }}>
           Home
         </a>
-        <a href="/" className="text-lg font-semibold" style={{ color: '#1DC8CC' }}>
+        <a href="/leaderboard" className="text-lg font-semibold" style={{ color: '#1DC8CC' }}>
           Leaderboard
         </a>
         <a href="/profile" className="text-lg font-semibold" style={{ color: '#B946FF' }}>
