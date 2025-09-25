@@ -12,52 +12,45 @@ export default {
         "2xl": "1400px",
       },
     },
-    extend: {
-      colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
+    colors: {
+      // Only allowed colors from user specification
+      black: "#000000",
+      white: "#FFFFFF",
+      brown: {
+        dark: "#2C1B18",
+        medium: "#944F23",
+        light: "#D0C6AC",
+        cream: "#EDB98A",
       },
+      gray: {
+        light: "#E6E6E6",
+        lighter: "#F2F2F2",
+        blue: "#8493A8",
+      },
+      pink: {
+        DEFAULT: "#FF7096",
+        light: "#FFD6DD",
+      },
+      purple: {
+        darkest: "#1E192F",
+        darker: "#1F152D",
+        dark: "#211B27",
+        DEFAULT: "#2C233A",
+        bright: "#B946FF",
+      },
+      blue: {
+        DEFAULT: "#437FD9",
+        cyan: "#1DC8CC",
+      },
+      orange: {
+        dark: "#FC6500",
+        DEFAULT: "#FF5500",
+        light: "#FF9500",
+      },
+      yellow: "#FFDD00",
+      green: "#00FFB2",
+    },
+    extend: {
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
