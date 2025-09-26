@@ -9,25 +9,26 @@ const HowToPlay = () => {
   };
 
   const handleStartPlaying = () => {
-    navigate('/');
+    navigate("/");
   };
 
   return (
-    <div className="min-h-screen bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url('/app_bg.png')"}}>
+    <div
+      className="min-h-screen bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/app_bg.png')" }}
+    >
       {/* Header */}
       <header className="px-6 py-6">
         <div className="flex items-center justify-between max-w-4xl mx-auto">
-          <button 
+          <button
             onClick={handleBack}
             className="text-white hover:text-gray-300 transition-colors"
           >
             <ArrowLeft size={24} />
           </button>
-          
           <h1 className="text-3xl md:text-4xl font-bold text-white text-center flex-1">
             How To Play Stakr
           </h1>
-          
           <div className="w-6"></div> {/* Spacer for centering */}
         </div>
       </header>
@@ -35,7 +36,6 @@ const HowToPlay = () => {
       {/* Main Content */}
       <main className="px-6 py-8">
         <div className="max-w-3xl mx-auto space-y-6">
-          
           {/* Step 1 */}
           <div className="bg-purple-darker rounded-2xl p-6 border border-purple/30">
             <div className="flex items-center gap-3 mb-4">
@@ -45,7 +45,8 @@ const HowToPlay = () => {
               </h2>
             </div>
             <p className="text-white/90 text-lg leading-relaxed">
-              Stake Your Tokens Into The Active Pool Before The Countdown Begins.
+              Stake Your Tokens Into The Active Pool Before The Countdown
+              Begins.
             </p>
           </div>
 
@@ -64,7 +65,10 @@ const HowToPlay = () => {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-white mt-1">•</span>
-                <span>The Twist: The Real End Time Is Hidden And Random — It Could Close Anytime.</span>
+                <span>
+                  The Twist: The Real End Time Is Hidden And Random — It Could
+                  Close Anytime.
+                </span>
               </li>
             </ul>
           </div>
@@ -108,11 +112,15 @@ const HowToPlay = () => {
             <ul className="text-white/90 text-lg leading-relaxed space-y-2">
               <li className="flex items-start gap-2">
                 <span className="text-white mt-1">•</span>
-                <span>Survivors: Reclaim Your Stake + Share Of Others' Losses.</span>
+                <span>
+                  Survivors: Reclaim Your Stake + Share Of Others' Losses.
+                </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-white mt-1">•</span>
-                <span>Late Movers: Forfeit Your Stake To The Fastest Players.</span>
+                <span>
+                  Late Movers: Forfeit Your Stake To The Fastest Players.
+                </span>
               </li>
             </ul>
           </div>
@@ -125,7 +133,7 @@ const HowToPlay = () => {
             >
               Start Playing Now
             </button>
-            
+
             <div className="mt-6 text-white/90 text-lg">
               <p>Think Fast, Stay Alert,</p>
               <p>Don't Be Too Early, Don't Be Too Late.</p>

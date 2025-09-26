@@ -8,6 +8,7 @@ import Profile from "./pages/Profile";
 import Leaderboard from "./pages/Leaderboard";
 import HowToPlay from "./pages/HowToPlay";
 import NotFound from "./pages/NotFound";
+import PoolActive from "./pages/PoolActive";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/how-to-play" element={<HowToPlay />} />
+          <Route path="/pool-active" element={<PoolActive />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
