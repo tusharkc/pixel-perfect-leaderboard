@@ -28,7 +28,14 @@ const Profile = () => {
       <div className="flex flex-col items-center px-8 py-12">
         {/* Profile Avatar */}
         <div className="relative mb-6">
-          <div className="profile-avatar-glow rounded-full p-1">
+          <div
+            className="rounded-full p-1"
+            style={{
+              boxShadow:
+                '0 0 30px rgba(29,200,204,0.6), 0 0 60px rgba(29,200,204,0.4)',
+              border: '3px solid #1DC8CC'
+            }}
+          >
             <Avatar className="w-32 h-32">
               <AvatarFallback style={{ backgroundColor: '#E6E6E6' }}>
                 <User size={48} color="#000000" />
@@ -92,8 +99,8 @@ const Profile = () => {
                   </div>
                 </div>
                 <Button 
-                  className="claim-rewards-button text-white font-semibold px-6 py-2 rounded-lg"
-                  style={{ backgroundColor: '#1DC8CC' }}
+                  className="text-white font-semibold px-6 py-2 rounded-lg"
+                  style={{ backgroundColor: '#1DC8CC', boxShadow: '0 0 15px rgba(29,200,204,0.4)' }}
                 >
                   Claim Rewards
                 </Button>
